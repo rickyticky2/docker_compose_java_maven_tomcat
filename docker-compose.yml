@@ -11,6 +11,8 @@ services:
     build: pr  
     depends_on:
       - sb
+    ports:
+       - "8080:8080"  
     volumes:
      - type: volume
        source: vol
