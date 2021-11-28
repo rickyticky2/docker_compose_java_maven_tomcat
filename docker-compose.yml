@@ -7,15 +7,13 @@ services:
       - type: volume
         source: sbdata
         target: /tmp/boxfuse-sample-java-war-hello
-  pr:
-    hostname: pr
-    depends_on:
-      - sb
+  pr:    
     build: pr  
     volumes:
       - type: volume
         source: sbdata
         target: /tmp/boxfuse-sample-java-war-hello
-
+    depends_on:
+      - sb
 volumes:
   sbdata: 
