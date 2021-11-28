@@ -1,19 +1,17 @@
 ---
-version: '3.7'
+version: '3.9'
 services:
   sb:
     build: sb
     volumes:
-      - type: volume
-        source: sbdata
+      - type: bind
+        source: ./boxfuse-sample-java-war-hello
         target: /tmp/boxfuse-sample-java-war-hello
   pr:    
     build: pr  
-    volumes:
-      - type: volume
-        source: sbdata
-        target: /tmp/boxfuse-sample-java-war-hello
     depends_on:
       - sb
-volumes:
-  sbdata: 
+    volumes:
+      - type: bind
+        source: ./boxfuse-sample-java-war-hello
+        target: /tmp/boxfuse-sample-java-war-hello
