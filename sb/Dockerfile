@@ -1,6 +1,6 @@
 FROM alpine
 RUN apk update
-apk add openjdk8
+RUN apk add openjdk8
 RUN apk add maven -l
 RUN apk add git -l
 WORKDIR /tmp/
