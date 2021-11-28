@@ -8,4 +8,6 @@ services:
   pr:
     hostname: pr
     build: pr  
+    volumes:
+      - /home/sb:/tmp/boxfuse-sample-java-war-hello
  
