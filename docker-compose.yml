@@ -10,7 +10,7 @@ services:
     depends_on:
       - sb
     volumes:
-      - vol:/tmp/boxfuse-sample-java-war-hello
+      - vol:/usr/local/tomcat/webapps
 volumes:
   vol:      
 
