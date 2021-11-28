@@ -8,5 +8,4 @@ services:
   pr:
     hostname: pr
     build: pr  
-volumes:
-  sb:    
+ 
