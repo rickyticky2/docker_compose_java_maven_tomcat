@@ -9,10 +9,13 @@ services:
         target: /tmp/boxfuse-sample-java-war-hello
   pr:
     hostname: pr
+    depends_on:
+      -sb
     build: pr  
     volumes:
       - type: volume
         source: sbdata
         target: /tmp/boxfuse-sample-java-war-hello
+
 volumes:
   sbdata: 
