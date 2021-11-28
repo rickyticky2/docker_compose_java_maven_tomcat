@@ -1,3 +1,3 @@
 FROM tomcat
-WORKDIR /tmp/boxfuse-sample-java-war-hello
+WORKDIR /usr/local/tomcat/webapps
 RUN ls -la
