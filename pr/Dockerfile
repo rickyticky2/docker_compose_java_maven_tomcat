@@ -1,3 +1,4 @@
 FROM tomcat
-RUN ls -la
-CMD catalina.sh run
+WORKDIR /usr/local/tomcat/bin
+CMD ["catalina.sh", "run"]
+EXPOSE 8080

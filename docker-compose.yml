@@ -6,7 +6,7 @@ services:
     volumes:
      - type: volume
        source: vol
-       target: /tmp/boxfuse-sample-java-war-hello
+       target: /tmp/boxfuse-sample-java-war-hello/target
   pr:    
     build: pr  
     depends_on:
@@ -14,7 +14,7 @@ services:
     volumes:
      - type: volume
        source: vol
-       target: /usr/local/tomcat
+       target: /usr/local/tomcat/webapp
 volumes:
   vol:      
 
