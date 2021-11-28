@@ -4,7 +4,7 @@ services:
   sb:
     build: sb
     volumes:
-      - sb:/tmp/boxfuse-sample-java-war-hello
+      - /home/sb:/tmp/boxfuse-sample-java-war-hello
   pr:
     hostname: pr
     build: pr  
