@@ -4,6 +4,7 @@ services:
   sb:
     build: sb
     volumes:
+       type: volume
        source: vol
        target: /tmp/boxfuse-sample-java-war-hello
   pr:    
@@ -11,6 +12,7 @@ services:
     depends_on:
       - sb
     volumes:
+       type: volume
        source: vol
        target: /usr/local/tomcat
 volumes:
