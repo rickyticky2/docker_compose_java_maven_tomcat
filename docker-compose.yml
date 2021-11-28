@@ -4,13 +4,15 @@ services:
   sb:
     build: sb
     volumes:
-      - vol:/tmp/boxfuse-sample-java-war-hello
+       source: vol
+       target: /tmp/boxfuse-sample-java-war-hello
   pr:    
     build: pr  
     depends_on:
       - sb
     volumes:
-      - vol:/usr/local/tomcat/webapps
+       source: vol
+       target: /usr/local/tomcat
 volumes:
   vol:      
 
