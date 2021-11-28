@@ -6,13 +6,13 @@ services:
     volumes:
       - type: volume
         source: sbdata
-        target:/tmp/boxfuse-sample-java-war-hello
+        target: /tmp/boxfuse-sample-java-war-hello
   pr:
     hostname: pr
     build: pr  
     volumes:
       - type: volume
         source: sbdata
-        target:/tmp/boxfuse-sample-java-war-hello
+        target: /tmp/boxfuse-sample-java-war-hello
 volumes:
   sbdata: 
