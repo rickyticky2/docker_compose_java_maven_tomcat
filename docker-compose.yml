@@ -4,9 +4,7 @@ services:
   sb:
     build: sb
     volumes:
-      - type: bind
-        source: /home/ubuntu/boxfuse
-        target: /tmp/boxfuse-sample-java-war-hello
+      - /home/ubuntu/boxfuse/:/tmp/boxfuse-sample-java-war-hello
   pr:    
     build: pr  
     depends_on:
