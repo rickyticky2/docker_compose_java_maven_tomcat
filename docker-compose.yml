@@ -10,7 +10,7 @@ services:
   pr:
     hostname: pr
     depends_on:
-      -sb
+      - sb
     build: pr  
     volumes:
       - type: volume
