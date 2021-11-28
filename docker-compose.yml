@@ -4,19 +4,15 @@ services:
   sb:
     build: sb
     volumes:
-     - type: volume
-       source: vol
-       target: /tmp/boxfuse-sample-java-war-hello/target
+     - vol1:/tmp/boxfuse-sample-java-war-hello/target
   pr:    
     build: pr  
     depends_on:
-      - sb
+     - sb
     ports:
-      - "8080:8080"   
+     - "8080:8080"   
     volumes:
-      - type: volume
-        source: vol
-        target: /usr/local/tomcat/webapp
+     - vol1:/usr/local/tomcat/webapps
 volumes:
-  vol:      
+  vol1:      
 
