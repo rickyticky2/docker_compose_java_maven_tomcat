@@ -1,13 +1,12 @@
 ---
-version: '3'
+version: '3.7'
 services:
   sb:
     build: sb
     volumes:
-      - type: bind
-        source: /tmp/boxfuse-sample-java-war-hello
-        target: /usr/share/boxfuse-sample-java-war-hello
-        read_only: true
+      - sb:/tmp/boxfuse-sample-java-war-hello
   pr:
     hostname: pr
     build: pr  
+volumes:
+  sb:    
