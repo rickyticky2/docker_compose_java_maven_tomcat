@@ -1,13 +1,18 @@
 ---
-version: '2'
+version: '3.7'
 services:
   sb:
     build: sb
     volumes:
-      - /home/sb:/tmp/boxfuse-sample-java-war-hello
+      - type: volume
+        source: sbdata
+        target:/tmp/boxfuse-sample-java-war-hello
   pr:
     hostname: pr
     build: pr  
     volumes:
-      - /home/sb:/tmp/boxfuse-sample-java-war-hello
- 
+      - type: volume
+        source: sbdata
+        target:/tmp/boxfuse-sample-java-war-hello
+volumes:
+  sbdata: 
