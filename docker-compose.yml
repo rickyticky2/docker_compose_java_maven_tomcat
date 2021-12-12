@@ -15,7 +15,7 @@ services:
       - "8080:8080"   
     volumes:
       - type: volume
-        source: papka
+        source: vol1
         target: /usr/local/tomcat/webapps
 volumes:
   vol1:      
