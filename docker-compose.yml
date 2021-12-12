@@ -5,7 +5,7 @@ services:
     build: sb
     volumes:
      - type: volume
-       source: papka
+       source: vol1
        target: /tmp/boxfuse-sample-java-war-hello/target
   pr:    
     build: pr  
@@ -18,5 +18,5 @@ services:
         source: papka
         target: /usr/local/tomcat/webapps
 volumes:
-  papka:      
+  vol1:      
 
